@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>                
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Malaria Testing</title>
+    <link rel="icon" href="images/icon.png" type="image/gif">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <!-- Custom styles for this -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/grayscale.css') }}">
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="jumbotron jumbotron-fluid bg-info text-white text-center" style="background: #AAA;">
+
+    <div class="container">
+        <h2 class="display-2">Classify Whether a Cell has been Infected with Malaria or Not</h2>
+        <br>
+        <p class="text-white bg-dark">Using a custom built CNN Classification Model that has a 95% accuracy and similar F1 Score with equally low False Positive and False Negative rates.</p>
+        <a href="https://github.com/divineunited" class="text-white bg-dark">Click here for the GitHub Source Code</a>
+    </div>
+
+</div>
+
+
+<div class="container">
+
+<p class="lead">Upload your image here:</p>
+
+<!-- after you run this POST method (which is sending a POST request to the web server), it will send us to the /result page -->
+<form action="/result" method="POST">
+    <br>
+    <input type="file" name="pic" accept="image/*">
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+    <br>
+    <br>
+</form>
+
+
+</div> <!-- end .container-->
+
+<div class="container">
+    <hr>
+    <p><strong><em>
+        About Malaria: 
+    </em></strong></p>
+    <hr>
+    <p class="text-black-80">
+        Malaria is a life-threatening disease caused by parasites that are transmitted to people through the bites of infected female Anopheles mosquitoes. It is preventable and curable.
+        <br>
+        In 2017, there were an estimated 219 million cases of malaria in 90 countries.
+        <br>
+        Malaria deaths reached 435 000 in 2017.
+        <br>
+        The WHO African Region carries a disproportionately high share of the global malaria burden. In 2017, the region was home to 92% of malaria cases and 93% of malaria deaths.
+        <br>
+        Malaria is caused by Plasmodium parasites. The parasites are spread to people through the bites of infected female Anopheles mosquitoes, called "malaria vectors." There are 5 parasite species that cause malaria in humans, and 2 of these species – P. falciparum and P. vivax – pose the greatest threat.
+    </p>            
+    <hr>
+    <p><strong><em>
+        Diagnosis of malaria can be difficult:
+    </em></strong></p>
+    <hr>
+    <p class="text-black-80">
+        Where malaria is not endemic any more (such as in the United States), health-care providers may not be familiar with the disease. Clinicians seeing a malaria patient may forget to consider malaria among the potential diagnoses and not order the needed diagnostic tests. Laboratorians may lack experience with malaria and fail to detect parasites when examining blood smears under the microscope.
+        <br>
+        Malaria is an acute febrile illness. In a non-immune individual, symptoms usually appear 10–15 days after the infective mosquito bite. The first symptoms – fever, headache, and chills – may be mild and difficult to recognize as malaria. If not treated within 24 hours, P. falciparum malaria can progress to severe illness, often leading to death.
+    </p>
+    <hr>
+    <p><strong><em>
+        Microscopic Diagnosis
+    </em></strong></p>
+    <hr>
+    <p class="text-black-80 mb-5">
+        Malaria parasites can be identified by examining under the microscope a drop of the patient’s blood, spread out as a “blood smear” on a microscope slide. Prior to examination, the specimen is stained to give the parasites a distinctive appearance. This technique remains the gold standard for laboratory confirmation of malaria. However, it depends on the quality of the reagents, of the microscope, and on the experience of the laboratorian.
+    </p>
+
+</div>
+
+<br>
+<br>
+
+<div class="container">
+    <!-- cards to show things -->
+    <div class="row">
+    
+            <div class="col-md-6 col-lg-6">
+              <div class="card">
+                <img src="images/infected.png" class="card-img-top img-fluid">
+                <div class="card-block">
+                  <h4 class="card-title">Sample of an Infected Cell</h4>
+                </div>
+              </div>
+              </div>
+  
+            <div class="col-md-6 col-lg-6">
+                <div class="card">
+                  <img src="images/uninfected.png" class="card-img-top img-fluid">
+                  <div class="card-block">
+                    <h4 class="card-title">Sample of an Uninfected Cell</h4>
+                  </div>
+                </div>
+              </div>
+  
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+
+</body>
+</html>
