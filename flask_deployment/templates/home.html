@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Malaria Testing</title>
-    <link rel="icon" href="images/icon.png" type="image/gif">
+    <link rel="icon" href="{{ url_for('static', filename='images/icon.png') }}" type="image/gif">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -36,7 +36,7 @@
         <h2 class="display-2">Classify Whether a Cell has been Infected with Malaria or Not</h2>
         <br>
         <p class="text-white bg-dark">Using a custom built CNN Classification Model that has a 95% accuracy and similar F1 Score with equally low False Positive and False Negative rates.</p>
-        <a href="https://github.com/divineunited" class="text-white bg-dark">Click here for the GitHub Source Code</a>
+        <a href="https://github.com/divineunited/malaria_classification" class="text-white bg-dark">Click here for the GitHub Source Code</a>
     </div>
 
 </div>
@@ -44,19 +44,16 @@
 
 <div class="container">
 
-<p class="lead">Upload your image here:</p>
+<p class="lead">Upload your image of a blood smear here:</p>
 
 <!-- after you run this POST method (which is sending a POST request to the web server), it will send us to the /result page -->
-<form action="/result" method="POST">
-    <br>
+<form action="/result" method="POST" enctype="multipart/form-data">
     <input type="file" name="pic" accept="image/*">
-    <br>
     <br>
     <input type="submit" value="Submit">
     <br>
     <br>
 </form>
-
 
 </div> <!-- end .container-->
 
@@ -107,7 +104,7 @@
     
             <div class="col-md-6 col-lg-6">
               <div class="card">
-                <img src="images/infected.png" class="card-img-top img-fluid">
+                <img src="{{ url_for('static', filename='images/infected.png') }}" class="card-img-top img-fluid">
                 <div class="card-block">
                   <h4 class="card-title">Sample of an Infected Cell</h4>
                 </div>
@@ -116,7 +113,7 @@
   
             <div class="col-md-6 col-lg-6">
                 <div class="card">
-                  <img src="images/uninfected.png" class="card-img-top img-fluid">
+                  <img src="{{ url_for('static', filename='images/uninfected.png') }}" class="card-img-top img-fluid">
                   <div class="card-block">
                     <h4 class="card-title">Sample of an Uninfected Cell</h4>
                   </div>
