@@ -4,7 +4,7 @@
 In this notebook, I will build a Convolution Neural Network ML Model that will be able to predict with a certain amount of accuracy whether or not an image of a cell has been infected with Malaria or not. I will then deploy the final model using Google Cloud Platform's App Engine.
 
 
-# Use the Model [here](https://malariainfections.appspot.com/) using your own Blood Smear Cell Images:
+# Test [here](https://malariainfections.appspot.com/) using your own Blood Smear Images:
 
 https://malariainfections.appspot.com/
 
